@@ -11,19 +11,25 @@ body {
 .sidebar {
     width: 200px;
     height: 100vh;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     background-color: #fff;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
 }
 
 /* Main Content */
-.flex-grow-1 {
-    margin-left: 200px; /* Push content to the right */
-    width: calc(100% - 200px); /* Ensure it doesn't overlap */
-}
+/* .flex-grow-1 {
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 50px;
+    width: auto;
+    height: 400px;
+    text-align: center;
+    padding: 0px;
+    background-color: #156CB9;
+    border-radius: 6px;
+} */
 
 /* Header */
 header {
@@ -33,7 +39,6 @@ header {
     padding: 60px 20px;
     text-align: center;
     font-size: 24px;
-    
 }
 
 /* Navigation */
@@ -43,7 +48,9 @@ header {
 }
 
 .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust spacing between icon and text */
     padding: 12px 15px;
     font-size: 15px;
     color: #333;
@@ -52,10 +59,21 @@ header {
     transition: all 0.3s ease;
 }
 
+.nav-link img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+/* Hover Effects */
 .nav-link:hover {
     background-color: #ED4A00;
     color: #fff !important;
     transform: translateX(5px);
+}
+
+.nav-link:hover img {
+    filter: brightness(0) invert(1); /* Change icon color on hover */
 }
 
 /* Buttons */
@@ -85,4 +103,3 @@ header {
         padding: 40px 10px;
     }
 }
-
