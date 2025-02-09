@@ -13,3 +13,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+// document.getElementById('fileInput').addEventListener('change', function(event) {
+//     const file = event.target.files[0];
+//     const display = document.getElementById('fileDisplay');
+
+//     if (file) {
+//         if (file.type.startsWith('image/')) {
+//             const img = document.createElement('img');
+//             img.src = URL.createObjectURL(file);
+//             display.innerHTML = '';
+//             display.appendChild(img);
+//         } else {
+//             display.innerHTML = `File selected: ${file.name}`;
+//         }
+//     }
+// });
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const display = document.getElementById('fileDisplay');
+
+    if (file) {
+        if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            display.innerHTML = ''; // Clear previous content
+            display.appendChild(img);
+        } else {
+            display.innerHTML = `File selected: ${file.name}`;
+        }
+    }
+});
