@@ -1,0 +1,86 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #F4F7FA;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Main Content */
+.flex-grow-1 {
+    margin-left: 200px; /* Push content to the right */
+    width: calc(100% - 200px); /* Ensure it doesn't overlap */
+}
+
+/* Header */
+header {
+    background: url('header-image.jpg') center/cover no-repeat;
+    color: white;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Navigation */
+.nav-item {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ED4A00;
+    color: #fff !important;
+    transform: translateX(5px);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ED4A00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c93d00;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+    header {
+        font-size: 20px;
+        padding: 40px 10px;
+    }
+}
