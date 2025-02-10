@@ -1,94 +1,21 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
     background-color: #EEF5FE;
+    color: #333;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 200px;
-    height: 100vh;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Main Content */
-/* .flex-grow-1 {
-    margin-top: 30px;
-    margin-left: 250px;
-    margin-right: 50px;
-    width: auto;
-    height: 400px;
-    text-align: center;
-    padding: 0px;
-    background-color: #156CB9;
-    border-radius: 6px;
-} */
-
-/* Header */
-header {
-    background: url('header-image.jpg');
-    color: white;
-    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
-    padding: 60px 20px;
-    text-align: center;
-    font-size: 24px;
-}
-
-/* Navigation */
-.nav-item {
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.nav-link {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    padding: 12px 15px;
-    font-size: 15px;
-    color: #333;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.nav-link img {
-    width: 20px; /* Adjust icon size */
-    height: 20px;
-    transition: filter 0.3s ease;
-}
-
-/* Hover Effects */
-.nav-link:hover {
-    background-color: #ED4A00;
-    color: #fff !important;
-    transform: translateX(5px);
-}
-
-.nav-link:hover img {
-    filter: brightness(0) invert(1); /* Change icon color on hover */
-}
-.Edit_Icon{
-
-    fill: white;
-
-}
 /* Buttons */
 .btn-primary {
     background-color: #ED4A00;
-    color: white;
-    padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    color: white;
     cursor: pointer;
+    font-size: 16px;
+    padding: 12px 20px;
     transition: all 0.3s ease;
 }
 
@@ -97,28 +24,30 @@ header {
     transform: scale(1.05);
 }
 
-/* Container for file upload and display */
+/* Edit Icon */
+.Edit_Icon {
+    fill: white;
+}
+
+/* File Upload & Display */
 .file-container {
+    align-items: center;
+    background-color: #F4F7FA;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F4F7FA;
-    overflow: hidden;
-    object-fit: cover;
-}
-.file-container img{
-
-    top: -60px; 
-
 }
 
-/* Upload button positioned in the upper right of the display */
+.file-container img {
+    top: -60px;
+}
+
 .file-upload-wrapper {
     position: absolute;
-
     right: 20px;
     z-index: 5;
 }
@@ -128,47 +57,71 @@ header {
     display: none;
 }
 
-/* Custom button */
-.custom-file-button {
-    padding: 12px 20px;
-    background-color: rgba(0, 123, 255, 0);
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-/* Hover effect */
-.custom-file-button:hover {
-    /* background-color: rgba(0, 86, 179, 0.9); */
-}
-
 /* File display area */
 #fileDisplay {
-    width: 100%;
-    height: 100%;
-    display: flex;
     align-items: center;
+    border-radius: 4px;
+    display: flex;
+    height: 100%;
     justify-content: center;
     overflow: hidden;
-    border-radius: 4px;
+    width: 100%;
+
    
 
+
+    
 }
 
 #fileDisplay img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
+/* Header */
+header {
+    background: url('header-image.jpg');
+    color: white;
+    font-size: 24px;
+    padding: 60px 20px;
+    text-align: center;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
 
+/* Navigation */
+.nav-item {
+    list-style: none;
+    margin-bottom: 10px;
+}
 
+.nav-link {
+    align-items: center;
+    border-radius: 8px;
+    color: #333;
+    display: flex;
+    font-size: 15px;
+    gap: 5px;
+    padding: 12px 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+.nav-link:hover {
+    background-color: #ED4A00;
+    color: #fff !important;
+    transform: translateX(5px);
+}
+
+.nav-link img {
+    height: 20px;
+    transition: filter 0.3s ease;
+    width: 20px;
+}
+
+.nav-link:hover img {
+    filter: brightness(0) invert(1);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -180,27 +133,49 @@ header {
         padding: 40px 10px;
     }
 }
-.Section_1{
 
-  
-    background-color: EEF5FE;
+/* Section 1 */
+.Section_1 {
+    background-color: #EEF5FE;
+    border-radius: 4px;
     color: black;
-    text-align: left;
-    line-height: 100px;
-    border-radius: 10px;
+    display: flex;
     font-size: 18px;
     font-weight: bold;
-    
-
-    width: 100%;
     height: 100%;
-    display: flex;
-  
-   padding-left: 1%;
+    line-height: 100px;
     overflow: hidden;
-    border-radius: 4px;
+    padding-left: 1%;
+    text-align: left;
+    width: 100%;
+}
 
+/* Sidebar */
+.sidebar {
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 200px;
+}
 
-   
+/* Custom Upload Button */
+.custom-file-button {
+    background-color: rgba(0, 123, 255, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+/* Hover effect */
+.custom-file-button:hover {
+    /* background-color: rgba(0, 86, 179, 0.9); */
 }
