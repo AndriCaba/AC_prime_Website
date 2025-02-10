@@ -190,15 +190,25 @@ header {
   /* Semi-transparent background */
     color: white;
     padding: 8px 12px;
-    border-radius: 5px;
+    
     cursor: pointer;
     font-size: 14px;
     display: flex;
     align-items: center;
+    
 }
 
 .second img {
     width: 16px;
     height: 16px;
     margin-right: 5px;
+    border-radius: 10px;
+}
+.row{
+background-color:#EEF5FE;
+border-radius: 6px;
+color: #13558F;
+  /* Thickness (normal, bold, lighter, 100-900) */
+ 
+font-size: 20px;
 }

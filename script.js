@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 // });
 
+
 document.getElementById('fileInput').addEventListener('change', function(event) {
     const file = event.target.files[0];
     const display = document.getElementById('fileDisplay');
@@ -47,3 +48,22 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
         }
     }
 });
+
+document.getElementById('fileInput2').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const display = document.getElementById('fileDisplay2'); 
+    const preImage = document.getElementById('preImage2'); 
+
+    if (file) {
+        if (file.type.startsWith('image/')) {
+            preImage.src = URL.createObjectURL(file); 
+        } else {
+            display.innerHTML = `File selected: ${file.name}`;
+        }
+    }
+});
+
+
+
+
+
