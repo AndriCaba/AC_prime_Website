@@ -179,3 +179,26 @@ header {
 .custom-file-button:hover {
     /* background-color: rgba(0, 86, 179, 0.9); */
 }
+
+
+
+
+.second {
+    position: absolute;
+    bottom: 10px;  /* Adjust as needed */
+    right: 10px;   /* Adjust as needed */
+  /* Semi-transparent background */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.second img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
