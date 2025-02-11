@@ -56,3 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
         editButtons.forEach(btn => btn.style.display = "inline");
     });
 });
+
+let count = 4;
+
+function addElement() {
+    count++;
+    let container = document.getElementById("elements-container");
+
+    let newElement = document.createElement("div");
+    newElement.classList.add("element");
+
+    newElement.innerHTML = `
+        <span class="number">0${count}</span>
+        <h3 contenteditable="true">New Title</h3>
+        <p contenteditable="true">New description...</p>
+    `;
+
+    container.appendChild(newElement);
+}
+
+function removeElement() {
+    let container = document.getElementById("elements-container");
+    if (container.children.length > 0) {
+        container.removeChild(container.lastElementChild);
+        count--;
+    }
+}

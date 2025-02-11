@@ -248,3 +248,48 @@ font-size: 20px;
 .highlight {
     color: #ffffff;
 }
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.add-btn, .remove-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-btn { background: blue; }
+.remove-btn { background: red; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.element {
+    background: #e6f0ff;
+    padding: 15px;
+    border-radius: 6px;
+    position: relative;
+    text-align: left;
+}
+
+.element h3, .element p {
+    margin: 10px 0;
+    outline: none;
+}
