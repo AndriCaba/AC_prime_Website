@@ -8,21 +8,27 @@ body {
 }
 
 /* Buttons */
-.btn-primary {
-    background-color: #ED4A00;
+.btn-primary, .custom-file-button, .add-btn, .remove-btn {
     border: none;
     border-radius: 8px;
-    color: white;
     cursor: pointer;
     font-size: 16px;
     padding: 12px 20px;
     transition: all 0.3s ease;
 }
 
+.btn-primary {
+    background-color: #ED4A00;
+    color: white;
+}
+
 .btn-primary:hover {
     background-color: #c93d00;
     transform: scale(1.05);
 }
+
+.add-btn { background: blue;  color: #ffffff;}
+.remove-btn { background: red; color: #ffffff; }
 
 /* Edit Icon */
 .Edit_Icon {
@@ -31,15 +37,14 @@ body {
 
 /* File Upload & Display */
 .file-container {
-    align-items: center;
-    background-color: #F4F7FA;
     display: flex;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
-    object-fit: cover;
-    overflow: hidden;
-    position: relative;
     width: 100%;
+    height: 100vh;
+    background-color: #F4F7FA;
+    position: relative;
+    overflow: hidden;
 }
 
 .file-container img {
@@ -52,30 +57,23 @@ body {
     z-index: 5;
 }
 
-/* Hide default file input */
 #fileInput {
     display: none;
 }
 
-/* File display area */
 #fileDisplay {
-    align-items: center;
-    border-radius: 4px;
     display: flex;
-    height: 100%;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;
     width: 100%;
-
-   
-
-
-    
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 #fileDisplay img {
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 
@@ -84,9 +82,9 @@ header {
     background: url('header-image.jpg');
     color: white;
     font-size: 24px;
-    padding: 60px 20px;
     text-align: center;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
 }
 
 /* Navigation */
@@ -96,27 +94,27 @@ header {
 }
 
 .nav-link {
+    display: flex;
     align-items: center;
+    padding: 12px 15px;
+    font-size: 15px;
     border-radius: 8px;
     color: #333;
-    display: flex;
-    font-size: 15px;
-    gap: 5px;
-    padding: 12px 15px;
     text-decoration: none;
     transition: all 0.3s ease;
+    gap: 5px;
 }
 
 .nav-link:hover {
     background-color: #ED4A00;
-    color: #fff !important;
+    color: white !important;
     transform: translateX(5px);
 }
 
 .nav-link img {
+    width: 20px;
     height: 20px;
     transition: filter 0.3s ease;
-    width: 20px;
 }
 
 .nav-link:hover img {
@@ -134,88 +132,33 @@ header {
     }
 }
 
-/* Section 1 */
-.Section_1 {
+/* Sections */
+.Section_1, .row {
     background-color: #EEF5FE;
-    border-radius: 4px;
-    color: black;
-    display: flex;
-    font-size: 18px;
+    border-radius: 6px;
+    color: #13558F;
+    font-size: 20px;
     font-weight: bold;
-    height: 100%;
-    line-height: 100px;
-    overflow: hidden;
-    padding-left: 1%;
     text-align: left;
-    width: 100%;
+    padding: 1%;
 }
 
 /* Sidebar */
 .sidebar {
+    width: 200px;
+    height: 100vh;
     background-color: #fff;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    left: 0;
     position: relative;
-    top: 0;
-    width: 200px;
 }
 
-/* Custom Upload Button */
-.custom-file-button {
-    background-color: rgba(0, 123, 255, 0);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    padding: 12px 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.custom-file-button:hover {
-    /* background-color: rgba(0, 86, 179, 0.9); */
-}
-
-
-
-
-.second {
-    position: absolute;
-    bottom: 10px;  /* Adjust as needed */
-    right: 10px;   /* Adjust as needed */
-  /* Semi-transparent background */
-    color: white;
-    padding: 8px 12px;
-    
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    
-}
-
-.second img {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-    border-radius: 10px;
-}
-.row{
-background-color:#EEF5FE;
-border-radius: 6px;
-color: #13558F;
-  /* Thickness (normal, bold, lighter, 100-900) */
- 
-font-size: 20px;
-}
+/* Image Container */
 .image-container {
     position: relative;
     display: inline-block;
 }
+
+
 
 .image-container img {
     width: 100%;
@@ -233,22 +176,24 @@ font-size: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     text-align: left;
- }
- 
+}
 
- .small-text {
+.small-text {
     font-size: 18px;
     font-weight: 400;
 }
-.large-text {   
+
+.large-text {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
 }
+
 .highlight {
     color: #ffffff;
 }
 
+/* Main Container */
 .container {
     max-width: 1000px;
     margin: auto;
@@ -260,20 +205,8 @@ font-size: 20px;
 
 .buttons {
     margin-bottom: 20px;
+   
 }
-
-.add-btn, .remove-btn {
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.add-btn { background: blue; }
-.remove-btn { background: red; }
 
 .grid-container {
     display: grid;
@@ -287,9 +220,4 @@ font-size: 20px;
     border-radius: 6px;
     position: relative;
     text-align: left;
-}
-
-.element h3, .element p {
-    margin: 10px 0;
-    outline: none;
 }
