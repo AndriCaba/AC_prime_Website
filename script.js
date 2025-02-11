@@ -97,3 +97,36 @@ function removeElement() {
         count--;
     }
 }
+
+
+let imageCount = 0;
+
+function addImage() {
+    let input = document.getElementById("imageInput");
+    let container = document.getElementById("image-container");
+
+    if (input.files.length > 0) {
+        let file = input.files[0];
+        let reader = new FileReader();
+
+        reader.onload = function (e) {
+            let newImage = document.createElement("img");
+            newImage.src = e.target.result;
+            newImage.classList.add("image-item");
+            container.appendChild(newImage);
+            imageCount++;
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+
+function removeImage() {
+    let container = document.getElementById("image-container");
+
+    if (container.children.length > 0) {
+        container.removeChild(container.lastElementChild);
+        imageCount--;
+    }
+}
+

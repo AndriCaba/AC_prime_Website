@@ -129,6 +129,19 @@
                             <p contenteditable="true">Our team offers expert guidance...</p>
                         </div>
                     </div>
+                    <div class="buttons">
+                        <input type="file" id="imageInput" accept="image/*">
+                        <button onclick="addImage()" class="add-btn"><img src="plus-circle.svg"> Add Image</button>
+                        <button onclick="removeImage()" class="remove-btn"><img src="dash-circle.svg"> Remove Image</button>
+                    </div>
+                    
+                    <!-- Image Container -->
+                    <div id="image-container" class="image-row">
+                        <img src="default.jpg" class="image-item">
+                        <img src="default.jpg" class="image-item">
+                        <img src="default.jpg" class="image-item">
+                    </div>
+                    
                 </div>
             </main>
         </div>
