@@ -180,8 +180,8 @@ header {
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    max-width: fit-content;
+    max-height: fit-content;
 }
 
 /* Overlay Text on Image */
@@ -225,18 +225,21 @@ header {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    
 }
 
 /* Buttons Section */
 .buttons {
-    margin-bottom: 20px;
-    margin-right: -900px;
+    max-width: fit-content;
+    max-height: max-content;
+    margin-left: auto;
 }
 
 /* ============================= */
 /* Grid Layout */
 /* ============================= */
 .grid-container {
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
