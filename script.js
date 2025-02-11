@@ -23,3 +23,36 @@ function handleImageUpload(inputId, displayId, imageId) {
 // Apply function to both upload inputs
 handleImageUpload('fileInput', 'fileDisplay', 'preImage');
 handleImageUpload('fileInput2', 'fileDisplay2', 'preImage2');
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let textElements = document.querySelectorAll(".editable-text");
+    let editButtons = document.querySelectorAll(".editBtn");
+    let saveButton = document.getElementById("saveBtn");
+
+    let originalTexts = {};
+
+    editButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            let textElement = textElements[index];
+
+            if (!(index in originalTexts)) {
+                originalTexts[index] = textElement.innerHTML;
+            }
+
+            textElement.contentEditable = "true";
+            textElement.focus();
+            saveButton.style.display = "inline";
+            button.style.display = "none";
+        });
+    });
+
+    saveButton.addEventListener("click", function () {
+        textElements.forEach(text => {
+            text.contentEditable = "false";
+        });
+
+        saveButton.style.display = "none";
+        editButtons.forEach(btn => btn.style.display = "inline");
+    });
+});
